@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light flex-md-column">
         <div class="container-fluid">
-            <div class="navbar-brand">Brand</div>
+            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
