@@ -21,6 +21,7 @@
                 <th>Nomor Perkara</th>
                 <th>Tanggal</th>
                 <th>Agenda</th>
+                <th>link</th>
             </tr>
         </thead>
         <tbody>
@@ -37,6 +38,7 @@
                         echo "<td>".$row["no_perkara"]."</td>";
                         echo "<td>".$row["tanggal"]."</td>";
                         echo "<td>".$row["agenda"]."</td>";
+                        echo "<td><a href=".$row["link"].">Detail</a></td>";
                         echo "</tr>";
                     }
                 } else {

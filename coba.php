@@ -10,6 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<?php
+// Memanggil file a.php
+include 'GETdata.php';
+?>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
@@ -39,7 +43,7 @@
 
 
 
-    <div class="container-fluid" style="padding-top:25px">  
+    <div class="container-fluid" style="padding-top:25px">
         <div class="table-responsive">
 
             <table class="table table-bordered">
@@ -55,8 +59,29 @@
                         <th style="background-color:black; color:white">Link</th>
                     </tr>
                 </thead>
-                
-               
+                <tbody>
+                    <?php
+                    // Mengecek apakah ada data atau tidak
+                    if (!empty($data)) {
+                        // Output data dari setiap baris
+                        foreach ($data as $row) {
+                            echo "<tr>";
+                            echo "<td>" . $row["id_klien"] . "</td>";
+                            echo "<td>" . $row["klasifikasi_perkara"] . "</td>";
+                            echo "<td>" . $row["pengadilan"] . "</td>";
+                            echo "<td>" . $row["misili_pengadilan"] . "</td>";
+                            echo "<td>" . $row["no_perkara"] . "</td>";
+                            echo "<td>" . $row["tanggal"] . "</td>";
+                            echo "<td>" . $row["agenda"] . "</td>";
+                            echo "<td><a href=" . $row["link"] . ">Detail</a></td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='7'>Tidak ada data</td></tr>";
+                    }
+                    ?>
+                </tbody>
+
             </table>
 
         </div>
