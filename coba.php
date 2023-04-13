@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Responsive Website</title>
+    <title>Familaw</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,34 +39,26 @@
 
 
 
-    <div class="container mt-3">
+    <div class="container-fluid" style="padding-top:25px">  
         <div class="table-responsive">
-            <table class="table table-striped">
+
+            <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
+                        <th style="background-color:black; color:white">Id Klien</th>
+                        <th style="background-color:black; color:white">Klasifikasi Perkara</th>
+                        <th style="background-color:black; color:white">Pengadilan</th>
+                        <th style="background-color:black; color:white">Tempat Pengadilan</th>
+                        <th style="background-color:black; color:white">No.Perkara</th>
+                        <th style="background-color:black; color:white">Tanggal</th>
+                        <th style="background-color:black; color:white">Agenda</th>
+                        <th style="background-color:black; color:white">Link</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                    </tr>
-                </tbody>
+                
+               
             </table>
+
         </div>
 
     </div>
