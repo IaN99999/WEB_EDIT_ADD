@@ -33,8 +33,8 @@
                         echo "<td>".$row["id_klien"]."</td>";
                         echo "<td>".$row["klasifikasi_perkara"]."</td>";
                         echo "<td>".$row["pengadilan"]."</td>";
-                        echo "<td>".$row["tempat_pengadilan"]."</td>";
-                        echo "<td>".$row["nomor_perkara"]."</td>";
+                        echo "<td>".$row["misili_pengadilan"]."</td>";
+                        echo "<td>".$row["no_perkara"]."</td>";
                         echo "<td>".$row["tanggal"]."</td>";
                         echo "<td>".$row["agenda"]."</td>";
                         echo "</tr>";

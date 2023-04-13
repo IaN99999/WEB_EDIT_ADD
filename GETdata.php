@@ -1,6 +1,6 @@
 <?php
-require "connect.php";
-$sql = "SELECT id_klien, klasifikasi_perkara, pengadilan, tempat_pengadilan, nomor_perkara, tanggal, agenda FROM kasus";
+require "connection.php";
+$sql = "SELECT id_klien, klasifikasi_perkara, pengadilan, misili_pengadilan, no_perkara, tanggal, agenda,link FROM data_klien";
 
 $result = mysqli_query($conn, $sql);
 
