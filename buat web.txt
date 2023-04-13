@@ -1,0 +1,8 @@
+buat web 
+harus bisa edit data 
+add client baru 
+
+responsive website bisa buka di hp
+
+-NAVBAR
+-ISI
