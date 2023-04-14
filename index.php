@@ -15,7 +15,7 @@
 include 'GETdata.php';
 ?>
 
-<body>
+<body  style="background-color:#191a1b">
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
             <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
@@ -63,14 +63,14 @@ include 'GETdata.php';
                         // Output data dari setiap baris
                         foreach ($data as $row) {
                             echo "<tr>";
-                            echo "<td>" . $row["id_klien"] . "</td>";
-                            echo "<td>" . $row["klasifikasi_perkara"] . "</td>";
-                            echo "<td>" . $row["pengadilan"] . "</td>";
-                            echo "<td>" . $row["misili_pengadilan"] . "</td>";
-                            echo "<td>" . $row["no_perkara"] . "</td>";
-                            echo "<td>" . $row["tanggal"] . "</td>";
-                            echo "<td>" . $row["agenda"] . "</td>";
-                            echo "<td><a href=" . $row["link"] . ">Detail</a></td>";
+                            echo "<td style='color:white'>" . $row["id_klien"] . "</td>";
+                            echo "<td style='color:white'>" . $row["klasifikasi_perkara"] . "</td>";
+                            echo "<td style='color:white'>" . $row["pengadilan"] . "</td>";
+                            echo "<td style='color:white'>" . $row["misili_pengadilan"] . "</td>";
+                            echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
+                            echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
+                            echo "<td style='color:white'>" . $row["agenda"] . "</td>";
+                            echo "<td style='color:white'><a href=" . $row["link"] . ">Detail</a></td>";
                             echo "</tr>";
                         }
                     } else {

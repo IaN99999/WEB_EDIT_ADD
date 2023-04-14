@@ -77,20 +77,19 @@
 
 </head>
 
-<body>
+<body style="background-color:#191a1b">
 
-    <nav class="navbar navbar-expand-md navbar-light flex-md-column">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-md flex-md-column" style="background-color:grey">
             <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
     </nav>
     <div class="container">
-        <h1 style="padding-top: 58px">Login</h1>
+        <h1 style="padding-top: 58px; color: white">LOGIN</h1>
         <form action="login.php" method="post">
             <div class="container">
-                <label for="uname" style="padding-right: 132px"><b>Username</b></label>
+                <label for="uname" style="padding-right: 132px; color:white"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
                 <div class="container"></div>
-                <label for="psw" style="padding-right: 132px"><b>Password</b></label>
+                <label for="psw" style="padding-right: 132px; color:white"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
 
                 <button type="submit">Login</button>
