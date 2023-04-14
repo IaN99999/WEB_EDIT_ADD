@@ -24,7 +24,7 @@ require_once 'login.php';
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahadmin.php">Add admin`</a>

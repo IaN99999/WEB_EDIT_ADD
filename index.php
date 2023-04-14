@@ -15,7 +15,7 @@
 include 'GETdata.php';
 ?>
 
-<body  style="background-color:#191a1b">
+<body style="background-color:#191a1b">
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
             <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
@@ -43,7 +43,7 @@ include 'GETdata.php';
     <div class="container-fluid" style="padding-top:25px">
         <div class="table-responsive">
 
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="data-table">
                 <thead>
                     <tr>
                         <th style="background-color:black; color:white">Id Klien</th>
@@ -80,11 +80,89 @@ include 'GETdata.php';
                 </tbody>
 
             </table>
+            <div id="pagination">
+                <!-- Tombol halaman akan ditampilkan di sini -->
+            </div>
 
         </div>
 
     </div>
 
 </body>
+<script>
+    // Ambil elemen tabel dan elemen pagination
+    const dataTable = document.querySelector('#data-table tbody');
+    const pagination = document.querySelector('#pagination');
+
+    // Definisikan variabel untuk menyimpan data dan jumlah halaman
+    let data = [];
+    let pageCount = 0;
+
+    // Fungsi untuk menampilkan data di tabel
+    function renderData(page) {
+        // Hitung indeks data pertama dan terakhir untuk halaman saat ini
+        const startIndex = (page - 1) * 10;
+        const endIndex = startIndex + 10;
+        const currentPageData = data.slice(startIndex, endIndex);
+
+        // Hapus semua baris data yang ada di tabel
+        while (dataTable.firstChild) {
+            dataTable.removeChild(dataTable.firstChild);
+        }
+
+        // Tambahkan baris data yang sesuai ke dalam tabel
+        currentPageData.forEach((item, index) => {
+            const row = dataTable.insertRow(index);
+            const noCell = row.insertCell(0);
+            const namaCell = row.insertCell(1);
+            const emailCell = row.insertCell(2);
+            const alamatCell = row.insertCell(3);
+
+            noCell.textContent = startIndex + index + 1;
+            namaCell.textContent = item.nama;
+            emailCell.textContent = item.email;
+            alamatCell.textContent = item.alamat;
+        });
+    }
+
+    // Fungsi untuk menampilkan tombol halaman di pagination
+    function renderPagination() {
+        // Hapus semua tombol halaman yang ada di pagination
+        while (pagination.firstChild) {
+            pagination.removeChild(pagination.firstChild);
+        }
+
+        // Tambahkan tombol halaman yang sesuai ke dalam pagination
+        for (let i = 1; i <= pageCount; i++) {
+            const button = document.createElement('button');
+            button.textContent = i;
+            button.addEventListener('click', () => {
+                renderData(i);
+            });
+
+            pagination.appendChild(button);
+        }
+    }
+
+    // Fungsi untuk memuat data dari server
+    function loadData() {
+        // Lakukan fetch data dari server
+        fetch('GETdata.php')
+            .then((response) => response.json())
+            .then((result) => {
+                // Simpan data ke dalam variabel dan hitung jumlah halaman
+                data = result;
+                pageCount = Math.ceil(data.length / 10);
+
+                // Tampilkan data dan tombol halaman di halaman pertama
+                renderData(1);
+                renderPagination();
+            })
+            .catch((error) => console.error(error));
+    }
+
+    // Panggil fungsi loadData untuk memuat data pertama kali
+    loadData();
+</script>
 
 </html>

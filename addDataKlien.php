@@ -19,6 +19,7 @@ $sql = "INSERT INTO data_klien (id_klien, klasifikasi_perkara, pengadilan, misil
 // Menjalankan query SQL dan memeriksa hasilnya
 if (mysqli_query($conn, $sql)) {
     echo "Data berhasil dimasukkan ke database";
+    header("Location: tambahDataklien.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
