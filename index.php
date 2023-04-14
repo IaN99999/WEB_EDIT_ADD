@@ -75,7 +75,7 @@ include 'GETdata.php';
                             echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
                             echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
-                            echo "<td style='color:white'><a href=" . $row["link"] . ">Detail</a></td>";
+                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "'>detail</button></td>";;
                             echo "</tr>";
                         }
                     } else {
@@ -95,6 +95,22 @@ include 'GETdata.php';
 
 </body>
 <script>
+    const details = document.querySelectorAll('.link');
+    details.forEach((button) => {
+        button.addEventListener('click', () => {
+            const id = button.getAttribute('data-id');
+            // Ambil data dari server berdasarkan id
+            console.log("masuk ke detail");
+            console.log(id);
+            fetch(`get_data.php?id_klien=${id}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    // Arahkan pengguna ke halaman baru dengan data yang diambil dari server
+                    window.location.href = `detailkasus.php?id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
+                })
+                .catch((error) => console.error(error));
+        });
+    });
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');

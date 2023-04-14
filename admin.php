@@ -109,7 +109,7 @@ include('login.php');
                             echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
                             echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
-                            echo "<td style='color:white'><button class='link btn-success'>detail</button></td>";
+                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "'>detail</button></td>";
                             echo "<td><button class='tombol btn-success' data-id='" . $row['id_klien'] . "'>edit</button></td>";
                             echo "</tr>";
                         }
@@ -192,6 +192,7 @@ include('login.php');
         button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
             // Ambil data dari server berdasarkan id
+            console.log("masuk ke detail");
             console.log(id);
             fetch(`get_data.php?id_klien=${id}`)
                 .then((response) => response.json())
