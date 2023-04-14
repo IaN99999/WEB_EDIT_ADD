@@ -25,16 +25,13 @@ include 'GETdata.php';
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="masuk.php">Login Admin</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Contacts</a>
                     </li>
                 </ul>
             </div>

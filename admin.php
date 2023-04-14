@@ -30,14 +30,10 @@ include 'GETdata.php';
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add admin`</a>
+                        <a class="nav-link" href="tambahadmin.php">Add admin`</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Add data klien`</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Edit`</a>
-                    </li>
+                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Logout</a>
                     </li>
