@@ -38,7 +38,7 @@
     </style>
 
 </head>
-<body >
+<body style="background-color:#191a1b">
 
 <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
@@ -62,36 +62,19 @@
         </div>
     </nav>
 
-    <div class="wrapper">
-      <!-- Your content goes here -->
-      <header>
-        <div class="container">
-        <h1 style="padding-top:35px">Contoh Footer HTML</h1>
-        </div>  
-    </header>
-      <main>
-        <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida id elit at euismod. Nunc lacinia nunc vel consequat. </p>
-        </div>  
-    </main>
-      <div class="push"></div>
-    </div>
-    <footer class="footer" >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Tentang Kami</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida id elit at euismod. Nunc lacinia nunc vel consequat. </p>
-          </div>
-          <div class="col-md-6">
-            <h3>Kontak</h3>
-            <p>Jl. Contoh No. 123</p>
-            <p>Telp. (021) 1234567</p>
-            <p>Email: info@contoh.com</p>
-          </div>
+    <div class="container">
+        <br><br>
+            <h3 style="color:white"> About us</h3>
+            <p style="color:white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida id elit at euismod. Nunc lacinia nunc vel consequat. </p>
         </div>
+        <br> <br>
+          <div class="container">
+            <h3 style="color:white">Contact</h3>
+            <p style="color:white">Jl. Contoh No. 123</p>
+            <p style="color:white">Telp. (021) 1234567</p>
+            <p style="color:white">Email: info@contoh.com</p>
+          
   </div>
-</footer>
 
 </body>
 
