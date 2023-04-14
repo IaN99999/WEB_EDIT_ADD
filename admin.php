@@ -109,7 +109,7 @@ include('login.php');
                             echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
                             echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
-                            echo "<td style='color:white'><a href=" . $row["link"] . ">Detail</a></td>";
+                            echo "<td style='color:white'><button class='link btn-success'>detail</button></td>";
                             echo "<td><button class='tombol btn-success' data-id='" . $row['id_klien'] . "'>edit</button></td>";
                             echo "</tr>";
                         }
@@ -169,8 +169,6 @@ include('login.php');
             </form>
         </div>
     </div>
-
-
 </body>
 <script>
     // Ambil elemen-elemen yang diperlukan
@@ -189,6 +187,21 @@ include('login.php');
 
     // Ketika tombol edit di klik, tampilkan modal
     const editButtons = document.querySelectorAll('.tombol');
+    const details = document.querySelectorAll('.link');
+    details.forEach((button) => {
+        button.addEventListener('click', () => {
+            const id = button.getAttribute('data-id');
+            // Ambil data dari server berdasarkan id
+            console.log(id);
+            fetch(`get_data.php?id_klien=${id}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    // Arahkan pengguna ke halaman baru dengan data yang diambil dari server
+                    window.location.href = `detailkasus.php?id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
+                })
+                .catch((error) => console.error(error));
+        });
+    });
 
     editButtons.forEach((button) => {
         button.addEventListener('click', () => {
