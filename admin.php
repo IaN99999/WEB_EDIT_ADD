@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include('login.php');
+?>
 <html lang="en">
 
 <head>
