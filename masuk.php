@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php
-// Memasukkan session.php untuk memeriksa login
-require_once 'login.php';
-?>
 <html>
 <head>
     <title>Login page</title>
