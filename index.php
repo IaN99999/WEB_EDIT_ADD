@@ -31,7 +31,7 @@ include 'GETdata.php';
                         <a class="nav-link" href="masuk.php">Login Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                 </ul>
             </div>
@@ -41,6 +41,11 @@ include 'GETdata.php';
 
 
     <div class="container-fluid" style="padding-top:25px">
+        <form id="search-form">
+            <label for="search-input" style="color:white">Cari:</label>
+            <input type="text" id="search-input" name="search">
+            <button type="submit" class="search-button btn-light">Cari</button>
+        </form>
         <div class="table-responsive">
 
             <table class="table table-bordered" id="data-table">
@@ -56,7 +61,7 @@ include 'GETdata.php';
                         <th style="background-color:black; color:white">Link</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
                     <?php
                     // Mengecek apakah ada data atau tidak
                     if (!empty($data)) {
@@ -90,6 +95,45 @@ include 'GETdata.php';
 
 </body>
 <script>
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const tableBody = document.getElementById('table-body');
+
+    searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const keyword = searchInput.value.trim().toLowerCase();
+        if (keyword) {
+            fetch(`search_data.php?keyword=${keyword}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    // Hapus data sebelumnya dari tabel
+                    while (tableBody.firstChild) {
+                        tableBody.removeChild(tableBody.firstChild);
+                    }
+                    // Tambahkan data hasil pencarian ke dalam tabel
+                    data.forEach((item) => {
+                        const row = tableBody.insertRow();
+                        row.innerHTML = `
+            <td style='color:white'>${item.id_klien}</td>
+            <td style='color:white'>${item.klasifikasi_perkara}</td>
+            <td style='color:white'>${item.pengadilan}</td>
+            <td style='color:white'>${item.misili_pengadilan}</td>
+            <td style='color:white'>${item.no_perkara}</td>
+            <td style='color:white'>${item.tanggal}</td>
+            <td style='color:white'>${item.agenda}</td>
+            <td style='color:white'><a href="${item.link}">Detail</a></td>
+          `;
+                    });
+                })
+                .catch((error) => console.error(error));
+        }
+    });
+
+    searchButton.addEventListener('click', () => {
+        searchForm.dispatchEvent(new Event('submit'));
+    });
+
     // Ambil elemen tabel dan elemen pagination
     const dataTable = document.querySelector('#data-table tbody');
     const pagination = document.querySelector('#pagination');
