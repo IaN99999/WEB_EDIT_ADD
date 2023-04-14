@@ -76,7 +76,7 @@ span.psw {
             <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
     </nav>
 <div class="container">
-    <h2 style="padding-top: 58px">Login</h2>
+    <h1 style="padding-top: 58px">Login</h1>
 <form action="auth.php" method="post">
   <div class="container">
     <label for="uname" style="padding-right: 132px"><b>Username</b></label>
