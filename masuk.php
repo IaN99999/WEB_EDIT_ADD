@@ -5,7 +5,7 @@ require_once 'login.php';
 ?>
 <html>
 <head>
-    <title>Login Form</title>
+    <title>Login page</title>
     <link rel="stylesheet" type="text/css" href="stylelogin.css">
 
     <style>
@@ -75,23 +75,23 @@ span.psw {
 </head>
 <body>
 
-    <h2>Login</h2>
-
-<form action="/action_page.php" method="post">
-  <div class="">
-    <img src="image/logo.png" alt="Avatar" class="avatar">
-  </div>
-
+<nav class="navbar navbar-expand-md navbar-light flex-md-column">
+        <div class="container-fluid">
+            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+    </nav>
+<div class="container">
+    <h2 style="padding-top: 58px">Login</h2>
+<form action="auth.php" method="post">
   <div class="container">
-    <label for="uname"><b>Username</b></label>
+    <label for="uname" style="padding-right: 132px"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
+    <div class="container"></div>
+    <label for="psw" style="padding-right: 132px"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
         
     <button type="submit">Login</button>
   </div>
-
+  </div>
 </form>
 </body>
 </html>
