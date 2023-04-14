@@ -5,4 +5,7 @@
   .navbar {
     background-color: rgb(171, 160, 160);
   }
- 
+#thead {
+  background-color:black;
+  color:white
+ }
