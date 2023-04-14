@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // Jika username dan password tidak cocok
         $error = "Username atau password salah";
+        echo $error;
     }
 }
 ?>
