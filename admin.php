@@ -11,7 +11,10 @@
 </head>
 
 <body>
-
+<?php
+// Memanggil file a.php
+include 'GETdata.php';
+?>
 <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
             <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
