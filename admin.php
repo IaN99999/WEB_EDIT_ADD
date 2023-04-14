@@ -49,7 +49,7 @@ include('login.php');
     }
 </style>
 
-<body>
+<body style="background-color:#191a1b">
     <?php
     // Memanggil file a.php
     include 'GETdata.php';
@@ -63,7 +63,7 @@ include('login.php');
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahadmin.php">Add admin`</a>
@@ -102,15 +102,15 @@ include('login.php');
                         // Output data dari setiap baris
                         foreach ($data as $row) {
                             echo "<tr>";
-                            echo "<td>" . $row["id_klien"] . "</td>";
-                            echo "<td>" . $row["klasifikasi_perkara"] . "</td>";
-                            echo "<td>" . $row["pengadilan"] . "</td>";
-                            echo "<td>" . $row["misili_pengadilan"] . "</td>";
-                            echo "<td>" . $row["no_perkara"] . "</td>";
-                            echo "<td>" . $row["tanggal"] . "</td>";
-                            echo "<td>" . $row["agenda"] . "</td>";
-                            echo "<td><a href=" . $row["link"] . ">Detail</a></td>";
-                            echo "<td><button class='tombol' data-id='" . $row['id_klien'] . "'>Edit Data</button></td>";
+                            echo "<td style='color:white'>" . $row["id_klien"] . "</td>";
+                            echo "<td style='color:white'>" . $row["klasifikasi_perkara"] . "</td>";
+                            echo "<td style='color:white'>" . $row["pengadilan"] . "</td>";
+                            echo "<td style='color:white'>" . $row["misili_pengadilan"] . "</td>";
+                            echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
+                            echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
+                            echo "<td style='color:white'>" . $row["agenda"] . "</td>";
+                            echo "<td style='color:white'><a href=" . $row["link"] . ">Detail</a></td>";
+                            echo "<td><button class='tombol btn-success' data-id='" . $row['id_klien'] . "'>edit</button></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -131,24 +131,41 @@ include('login.php');
     <div class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <br>
             <h2>Edit Data</h2>
+            <br>
             <form id="editForm">
                 <input type="hidden" id="editId" name="id">
                 <label for="editKlasifikasi">Klasifikasi Perkara:</label>
+                <br>
                 <input type="text" id="editKlasifikasi" name="klasifikasi">
+                <br> <br>
                 <label for="editPengadilan">Pengadilan:</label>
+                <br>
                 <input type="text" id="editPengadilan" name="pengadilan">
+                <br><br>
                 <label for="editMisili">Misili Pengadilan:</label>
+                <br>
                 <input type="text" id="editMisili" name="misili">
+                <br><br>
                 <label for="editNoPerkara">No. Perkara:</label>
+                <br>
                 <input type="text" id="editNoPerkara" name="no_perkara">
+                <br><br>
                 <label for="editTanggal">Tanggal:</label>
+                <br>
                 <input type="date" id="editTanggal" name="tanggal">
+                <br><br>
                 <label for="editAgenda">Agenda:</label>
+                <br>
                 <input type="text" id="editAgenda" name="agenda">
+                <br><br>
                 <label for="editLink">Link:</label>
+                <br>
                 <input type="text" id="editLink" name="link">
+                <br><br>
                 <input type="submit" value="Simpan">
+                <br><br>
             </form>
         </div>
     </div>
