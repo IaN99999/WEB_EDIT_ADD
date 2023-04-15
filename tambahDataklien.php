@@ -69,7 +69,7 @@ require_once 'login.php';
         <input type="date" style="padding-left: 48px"id="tanggal" name="tanggal" required><br><br>
         <label for="agenda" style="color:white">Agenda:</label>
         <br>
-        <input type="text" id="link" name="link" required><br><br>
+        <input type="text" id="agenda" name="agenda" required><br><br>
         <input type="submit" style="margin-left: 120px"value="Submit">
     </form>
 </div>
