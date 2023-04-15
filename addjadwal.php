@@ -7,6 +7,8 @@ $agenda_sidang = $_POST['agenda_sidang'];
 $lawyer = $_POST['lawyer'];
 $keterangan = $_POST['keterangan'];
 
+$tanggal_sidang = date("Y-m-d", strtotime($tanggal_sidang));
+
 // Menambahkan data ke dalam tabel "proses"
 $sql = "INSERT INTO proses (id_klien, tahapan, PIC)
 VALUES ('$id_klien', 'Konsultasi', '$konsultasi'),

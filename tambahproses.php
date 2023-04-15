@@ -54,28 +54,28 @@ require_once 'login.php';
         <input type="number" id="id_klien" name="id_klien" required><br><br>
         <label for="name" style="color:white">konsultasi:</label>
         <br>
-        <input type="number" id="konsultasi" name="konsultasi" required><br><br>
+        <input type="text" id="konsultasi" name="konsultasi" required><br><br>
         <label for="name" style="color:white">pembuatan gugatan:</label>
         <br>
-        <input type="number" id="pembuatan_gugatan" name="pembuatan_gugatan" required><br><br>
+        <input type="text" id="pembuatan_gugatan" name="pembuatan_gugatan" required><br><br>
         <label for="name" style="color:white">review klien:</label>
         <br>
-        <input type="number" id="review_klien" name="review_klien" required><br><br>
+        <input type="text" id="review_klien" name="review_klien" required><br><br>
         <label for="name" style="color:white">revisi klien:</label>
         <br>
-        <input type="number" id="revisi_klien" name="revisi_klien" required><br><br>
+        <input type="text" id="revisi_klien" name="revisi_klien" required><br><br>
         <label for="name" style="color:white">Review Kepala Divisi Litigasi:</label>
         <br>
-        <input type="number" id="Review_Kepala_Divisi_Litigasi" name="Review_Kepala_Divisi_Litigasi" required><br><br>
+        <input type="text" id="Review_Kepala_Divisi_Litigasi" name="Review_Kepala_Divisi_Litigasi" required><br><br>
         <label for="name" style="color:white">revisi Kepala Divisi Litigasi:</label>
         <br>
-        <input type="number" id="Revisi_Kepala_Divisi_Litigasi" name="Revisi_Kepala_Divisi_Litigasi" required><br><br>
+        <input type="text" id="Revisi_Kepala_Divisi_Litigasi" name="Revisi_Kepala_Divisi_Litigasi" required><br><br>
         <label for="name" style="color:white">Persetujuan Gugatan:</label>
         <br>
-        <input type="number" id="persetujuan_gugatan" name="persetujuan_gugatan" required><br><br>
+        <input type="text" id="persetujuan_gugatan" name="persetujuan_gugatan" required><br><br>
         <label for="name" style="color:white">Pendaftaran Perkara:</label>
         <br>
-        <input type="number" id="pendaftaran_perkara" name="pendaftaran_perkara" required><br><br>
+        <input type="text" id="pendaftaran_perkara" name="pendaftaran_perkara" required><br><br>
         <input type="submit" style="margin-left: 120px"value="Submit">
     </form>
 </div>
