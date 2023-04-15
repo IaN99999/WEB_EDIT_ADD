@@ -51,19 +51,19 @@ include 'GETdata.php';
         <div class="table-responsive">
 
             <table class="table table-bordered" id="data-table">
-                <thead>
+                <thead style="background-color:#25316D">
                     <tr>
-                        <th style="background-color:black; color:white">Id Klien</th>
-                        <th style="background-color:black; color:white">Klasifikasi Perkara</th>
-                        <th style="background-color:black; color:white">Pengadilan</th>
-                        <th style="background-color:black; color:white">Tempat Pengadilan</th>
-                        <th style="background-color:black; color:white">No.Perkara</th>
-                        <th style="background-color:black; color:white">Tanggal</th>
-                        <th style="background-color:black; color:white">Agenda</th>
-                        <th style="background-color:black; color:white">Link</th>
+                        <th style="color:white">Id Klien</th>
+                        <th style="color:white">Klasifikasi Perkara</th>
+                        <th style="color:white">Pengadilan</th>
+                        <th style="color:white">Tempat Pengadilan</th>
+                        <th style="color:white">No.Perkara</th>
+                        <th style="color:white">Tanggal</th>
+                        <th style="color:white">Agenda</th>
+                        <th style="color:white">Link</th>
                     </tr>
                 </thead>
-                <tbody id="table-body">
+                <tbody id="table-body" style="background-color:black" >
                     <?php
                     // Mengecek apakah ada data atau tidak
                     if (!empty($data)) {
