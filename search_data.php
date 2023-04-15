@@ -7,7 +7,7 @@ $keyword = mysqli_real_escape_string($conn, $_GET['keyword']);
 if (strlen($keyword) > 0) {
     $query = "SELECT * FROM data_klien WHERE 
     id_klien LIKE '%$keyword%' OR 
-    klasifikasi_perkara LIKE '%$keyword%' OR 
+    Klasifikasi_perkara LIKE '%$keyword%' OR 
     pengadilan LIKE '%$keyword%' OR 
     misili_pengadilan LIKE '%$keyword%' OR 
     no_perkara LIKE '%$keyword%' OR 
