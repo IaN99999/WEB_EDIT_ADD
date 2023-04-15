@@ -31,6 +31,9 @@ require_once 'login.php';
                     <li class="nav-item">
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
                     <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tambahproses.php">tambah proses</a>
+                    <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>

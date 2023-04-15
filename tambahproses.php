@@ -32,9 +32,6 @@ require_once 'login.php';
                     <li class="nav-item">
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
                     <li class="nav-item">
-                    <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">tambah proses</a>
-                    <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
                 </ul>
@@ -45,31 +42,34 @@ require_once 'login.php';
     <div class="container">
     <h1 style="padding-top:35px; color:white">Input Data Klien</h1>
     <br>
-    <form action="addDataKlien.php" method="post">
+    <form action="addproses.php" method="post">
         <label for="name" style="color:white">Id Klien:</label>
         <br>
         <input type="number" id="id_klien" name="id_klien" required><br><br>
-        <label for="klasifikasi_perkara" style="color:white">Klasifikasi Perkara:</label>
+        <label for="name" style="color:white">konsultasi:</label>
         <br>
-        <input type="text" id="klasifikasi_perkara" name="klasifikasi_perkara" required><br><br>
-        <label for="pengadilan" style="color:white">Pengadilan:</label>
+        <input type="number" id="konsultasi" name="konsultasi" required><br><br>
+        <label for="name" style="color:white">pembuatan gugatan:</label>
         <br>
-        <input type="text" id="pengadilan" name="pengadilan" required><br><br>
-        <label for="misili_pengadilan" style="color:white">Misili Pengadilan:</label>
+        <input type="number" id="pembuatan_gugatan" name="pembuatan_gugatan" required><br><br>
+        <label for="name" style="color:white">review klien:</label>
         <br>
-        <input type="text" id="misili_pengadilan" name="misili_pengadilan" required><br><br>
-        <label for="no_perkara" style="color:white">Nomor Perkara:</label>
+        <input type="number" id="review_klien" name="review_klien" required><br><br>
+        <label for="name" style="color:white">revisi klien:</label>
         <br>
-        <input type="number" id="no_perkara" name="no_perkara" required><br><br>
-        <label for="tanggal" style="color:white">Tanggal:</label>
+        <input type="number" id="revisi_klien" name="revisi_klien" required><br><br>
+        <label for="name" style="color:white">Review Kepala Divisi Litigasi:</label>
         <br>
-        <input type="date" style="padding-left: 48px"id="tanggal" name="tanggal" required><br><br>
-        <label for="agenda" style="color:white">Agenda:</label>
+        <input type="number" id="Review_Kepala_Divisi_Litigasi" name="Review_Kepala_Divisi_Litigasi" required><br><br>
+        <label for="name" style="color:white">revisi Kepala Divisi Litigasi:</label>
         <br>
-        <input type="text" id="agenda" name="agenda" required><br><br>
-        <label for="link" style="color:white">Link:</label>
+        <input type="number" id="Revisi_Kepala_Divisi_Litigasi" name="Revisi_Kepala_Divisi_Litigasi" required><br><br>
+        <label for="name" style="color:white">Persetujuan Gugatan:</label>
         <br>
-        <input type="text" id="link" name="link" required><br><br>
+        <input type="number" id="persetujuan_gugatan" name="persetujuan_gugatan" required><br><br>
+        <label for="name" style="color:white">Pendaftaran Perkara:</label>
+        <br>
+        <input type="number" id="pendaftaran_perkara" name="pendaftaran_perkara" required><br><br>
         <input type="submit" style="margin-left: 120px"value="Submit">
     </form>
 </div>
