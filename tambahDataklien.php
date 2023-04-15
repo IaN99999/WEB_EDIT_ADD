@@ -58,7 +58,7 @@ require_once 'login.php';
         <label for="pengadilan" style="color:white">Pengadilan:</label>
         <br>
         <input type="text" id="pengadilan" name="pengadilan" required><br><br>
-        <label for="misili_pengadilan" style="color:white">Misili Pengadilan:</label>
+        <label for="misili_pengadilan" style="color:white">Domisili Pengadilan:</label>
         <br>
         <input type="text" id="misili_pengadilan" name="misili_pengadilan" required><br><br>
         <label for="no_perkara" style="color:white">Nomor Perkara:</label>
@@ -68,9 +68,6 @@ require_once 'login.php';
         <br>
         <input type="date" style="padding-left: 48px"id="tanggal" name="tanggal" required><br><br>
         <label for="agenda" style="color:white">Agenda:</label>
-        <br>
-        <input type="text" id="agenda" name="agenda" required><br><br>
-        <label for="link" style="color:white">Link:</label>
         <br>
         <input type="text" id="link" name="link" required><br><br>
         <input type="submit" style="margin-left: 120px"value="Submit">

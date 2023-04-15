@@ -57,7 +57,7 @@ if (mysqli_num_rows($resultt) > 0) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="admin.php">Home</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@ if (mysqli_num_rows($resultt) > 0) {
 
     <div class="container-fluid" style="padding-top:25px">
         <div class="table-responsive">
-            <h2 style="color:white">data umum</h2>
+            <h2 style="color:white">Data Umum</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -92,7 +92,7 @@ if (mysqli_num_rows($resultt) > 0) {
                 </tbody>
             </table>
             <br>
-            <h2 style="color:white">proses</h2>
+            <h2 style="color:white">Proses</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -117,7 +117,7 @@ if (mysqli_num_rows($resultt) > 0) {
                     ?>
                 </tbody>
             </table>
-            <h2 style="color:white">jadwal sidang</h2>
+            <h2 style="color:white">Jadwal Sidang</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>

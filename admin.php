@@ -72,10 +72,10 @@ include('login.php');
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">tambah proses</a> </li>
+                        <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahjadwal.php">tambah jadwal sidang</a> </li>
+                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
