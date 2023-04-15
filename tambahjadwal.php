@@ -46,7 +46,7 @@ require_once 'login.php';
     </nav>
 
     <div class="container">
-    <h1 style="padding-top:35px; color:white">Input Data Klien</h1>
+    <h1 style="padding-top:35px; color:white">Input Jadwal</h1>
     <br>
     <form action="addjadwal.php" method="post">
         <label for="name" style="color:white">Id Klien:</label>
