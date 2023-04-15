@@ -4,9 +4,6 @@ require "connection.php";
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-// Mengubah format tanggal menjadi YYYY-MM-DD
-$tanggal = date("Y-m-d", strtotime($tanggal));
-
 // Membuat query SQL untuk memasukkan data ke database
 $sql = "INSERT INTO data_klien (username, password) VALUES ('$username', '$password')";
 

@@ -50,7 +50,7 @@ require_once 'login.php';
     <form action="addDataKlien.php" method="post">
         <br><br>
         <label for="username" style="color:white">Username:</label>
-        <input type="number" id="username" name="username" required style="margin-left: 10px"><br><br>
+        <input type="text" id="username" name="username" required style="margin-left: 10px"><br><br>
         <br>
         <label for="password"  style="color:white">Password:</label>
         <input type="password" id="password" name="password" required style="margin-left: 11px"><br><br>
