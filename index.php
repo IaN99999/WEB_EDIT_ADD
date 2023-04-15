@@ -41,11 +41,13 @@ include 'GETdata.php';
 
 
     <div class="container-fluid" style="padding-top:25px">
-        <form id="search-form">
-            <label for="search-input" style="color:white">Cari:</label>
+        <form id="search-form" style="display: flex;
+  align-items: center;
+  justify-content: flex-end;">
             <input type="text" id="search-input" name="search">
-            <button type="submit" class="search-button btn-light">Cari</button>
+            <button type="submit" class="search-button btn-light">Search</button>
         </form>
+        <br>
         <div class="table-responsive">
 
             <table class="table table-bordered" id="data-table">
