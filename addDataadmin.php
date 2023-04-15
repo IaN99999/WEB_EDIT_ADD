@@ -13,6 +13,7 @@ $sql = "INSERT INTO data_klien (username, password) VALUES ('$username', '$passw
 // Menjalankan query SQL dan memeriksa hasilnya
 if (mysqli_query($conn, $sql)) {
     echo "Data berhasil dimasukkan ke database";
+    header("Location: tambahadmin.php");
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

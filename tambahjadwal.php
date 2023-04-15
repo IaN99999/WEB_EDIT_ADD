@@ -51,10 +51,10 @@ require_once 'login.php';
     <form action="addjadwal.php" method="post">
         <label for="name" style="color:white">Id Klien:</label>
         <br>
-        <input type="date" id="id_klien" name="id_klien" required><br><br>
+        <input type="number" id="id_klien" name="id_klien" required><br><br>
         <label for="name" style="color:white">tanggal sidang:</label>
         <br>
-        <input type="text" id="tanggal_sidang" name="tanggal_sidang" required><br><br>
+        <input type="date" id="tanggal_sidang" name="tanggal_sidang" required><br><br>
         <label for="name" style="color:white">agenda sidang:</label>
         <br>
         <input type="text" id="agenda_sidang" name="agenda_sidang" required><br><br>
