@@ -70,11 +70,13 @@
 
   <div class="container">
     <br><br><br><br><br>
+    <div class="col-9">
     <h3 style="color:white">Disclaimer</h3>
     <p style="color:white">Halaman ini ditujukan untuk semua klien aktif Familaw Indonesia sebagai bentuk transparansi, komunikasi, informasi dan upaya peningkatan
       kualitas layanan Familaw Indonesia. Halaman ini tidak mencantumkan nama, identitas dan informasi kerahasiaan klien untuk menjamin
       kerahasiaan dan privasi. Sehingga setiap klien telah memiliki ID Kliennya masing-masing, dan untuk data lebih lanjut klik pada kolom "detail".
     </p>
+    </div>
   </div>
   <br> <br>
   <div class="container">
