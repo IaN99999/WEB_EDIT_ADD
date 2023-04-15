@@ -33,10 +33,10 @@ require_once 'login.php';
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">tambah proses</a> </li>
+                        <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahjadwal.php">tambah jadwal sidang</a> </li>
+                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
@@ -52,22 +52,22 @@ require_once 'login.php';
         <label for="name" style="color:white">Id Klien:</label>
         <br>
         <input type="number" id="id_klien" name="id_klien" required><br><br>
-        <label for="name" style="color:white">konsultasi:</label>
+        <label for="name" style="color:white">Konsultasi:</label>
         <br>
         <input type="text" id="konsultasi" name="konsultasi" required><br><br>
-        <label for="name" style="color:white">pembuatan gugatan:</label>
+        <label for="name" style="color:white">Pembuatan gugatan:</label>
         <br>
         <input type="text" id="pembuatan_gugatan" name="pembuatan_gugatan" required><br><br>
-        <label for="name" style="color:white">review klien:</label>
+        <label for="name" style="color:white">Review klien:</label>
         <br>
         <input type="text" id="review_klien" name="review_klien" required><br><br>
-        <label for="name" style="color:white">revisi klien:</label>
+        <label for="name" style="color:white">Revisi klien:</label>
         <br>
         <input type="text" id="revisi_klien" name="revisi_klien" required><br><br>
         <label for="name" style="color:white">Review Kepala Divisi Litigasi:</label>
         <br>
         <input type="text" id="Review_Kepala_Divisi_Litigasi" name="Review_Kepala_Divisi_Litigasi" required><br><br>
-        <label for="name" style="color:white">revisi Kepala Divisi Litigasi:</label>
+        <label for="name" style="color:white">Revisi Kepala Divisi Litigasi:</label>
         <br>
         <input type="text" id="Revisi_Kepala_Divisi_Litigasi" name="Revisi_Kepala_Divisi_Litigasi" required><br><br>
         <label for="name" style="color:white">Persetujuan Gugatan:</label>

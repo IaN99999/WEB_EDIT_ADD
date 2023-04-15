@@ -33,10 +33,10 @@ require_once 'login.php';
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">tambah proses</a> </li>
+                        <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahjadwal.php">tambah jadwal sidang</a> </li>
+                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
@@ -52,16 +52,16 @@ require_once 'login.php';
         <label for="name" style="color:white">Id Klien:</label>
         <br>
         <input type="number" id="id_klien" name="id_klien" required><br><br>
-        <label for="name" style="color:white">tanggal sidang:</label>
+        <label for="name" style="color:white">Tanggal sidang:</label>
         <br>
-        <input type="date" id="tanggal_sidang" name="tanggal_sidang" required><br><br>
-        <label for="name" style="color:white">agenda sidang:</label>
+        <input type="date" style="padding-left: 48px" id="tanggal_sidang" name="tanggal_sidang" required><br><br>
+        <label for="name" style="color:white">Agenda sidang:</label>
         <br>
         <input type="text" id="agenda_sidang" name="agenda_sidang" required><br><br>
-        <label for="name" style="color:white">lawyer:</label>
+        <label for="name" style="color:white">Lawyer:</label>
         <br>
         <input type="text" id="lawyer" name="lawyer" required><br><br>
-        <label for="name" style="color:white">keterangan:</label>
+        <label for="name" style="color:white">Keterangan:</label>
         <br>
         <input type="text" id="keterangan" name="keterangan" required><br><br>
         <input type="submit" style="margin-left: 120px"value="Submit">
