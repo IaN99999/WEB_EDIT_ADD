@@ -23,17 +23,20 @@ require_once 'login.php';
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                <li class="nav-item">
                         <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahadmin.php">Add admin`</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
+                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tambahproses.php">tambah proses</a> </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">tambah proses</a>
+                        <a class="nav-link" href="tambahjadwal.php">tambah jadwal sidang</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>

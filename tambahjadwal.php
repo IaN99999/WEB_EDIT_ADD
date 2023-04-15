@@ -12,6 +12,7 @@ require_once 'login.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body style="background-color:#191a1b">
 
 <nav class="navbar navbar-expand-md navbar-light flex-md-column">
@@ -44,19 +45,27 @@ require_once 'login.php';
         </div>
     </nav>
 
-<div class="container">
-    <h1 style="padding-top:35px; color:white">Input Data Admin</h1>
-  
-    <form action="addDataKlien.php" method="post">
-        <br><br>
-        <label for="username" style="color:white">Username:</label>
-        <input type="number" id="username" name="username" required style="margin-left: 10px"><br><br>
+    <div class="container">
+    <h1 style="padding-top:35px; color:white">Input Data Klien</h1>
+    <br>
+    <form action="addjadwal.php" method="post">
+        <label for="name" style="color:white">Id Klien:</label>
         <br>
-        <label for="password"  style="color:white">Password:</label>
-        <input type="password" id="password" name="password" required style="margin-left: 11px"><br><br>
-        <input type="submit" style="margin-left: 206px" value="Submit">
+        <input type="number" id="id_klien" name="id_klien" required><br><br>
+        <label for="name" style="color:white">tanggal sidang:</label>
+        <br>
+        <input type="number" id="tanggal_sidang" name="tanggal_sidang" required><br><br>
+        <label for="name" style="color:white">agenda sidang:</label>
+        <br>
+        <input type="number" id="agenda_sidang" name="agenda_sidang" required><br><br>
+        <label for="name" style="color:white">lawyer:</label>
+        <br>
+        <input type="number" id="lawyer" name="lawyer" required><br><br>
+        <label for="name" style="color:white">keterangan:</label>
+        <br>
+        <input type="number" id="keterangan" name="keterangan" required><br><br>
+        <input type="submit" style="margin-left: 120px"value="Submit">
     </form>
-    </div>
-
+</div>
 </body>
 </html>
