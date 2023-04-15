@@ -62,7 +62,7 @@ include('login.php');
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
@@ -72,10 +72,10 @@ include('login.php');
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
+                        <a class="nav-link" href="tambahproses.php">tambah proses</a> </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a> </li>
+                        <a class="nav-link" href="tambahjadwal.php">tambah jadwal sidang</a> </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
@@ -166,10 +166,10 @@ include('login.php');
                 <br>
                 <input type="text" id="editAgenda" name="agenda">
                 <br><br>
-                <label for="editLink">Link:</label>
+                <!-- <label for="editLink">Link:</label>
                 <br>
                 <input type="text" id="editLink" name="link">
-                <br><br>
+                <br><br> -->
                 <input type="submit" value="Simpan">
                 <br><br>
             </form>
@@ -189,7 +189,7 @@ include('login.php');
     const editNoPerkara = document.querySelector('#editNoPerkara');
     const editTanggal = document.querySelector('#editTanggal');
     const editAgenda = document.querySelector('#editAgenda');
-    const editLink = document.querySelector('#editLink');
+    const editLink =" ";
 
     // Ketika tombol edit di klik, tampilkan modal
     const editButtons = document.querySelectorAll('.tombol');
