@@ -13,7 +13,7 @@ $query = "UPDATE data_klien SET
           no_perkara = '".$data['no_perkara']."',
           tanggal = '".$data['tanggal']."',
           agenda = '".$data['agenda']."',
-          link = '".$data['link']."'
+          link = ''
           WHERE id_klien = '".$data['id_klien']."'";
 $result = mysqli_query($conn, $query);
 
