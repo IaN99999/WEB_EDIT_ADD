@@ -220,7 +220,7 @@ include('login.php');
                 .then((data) => {
                     // Isi nilai input form edit dengan data yang diambil dari server
                     editId.value = data.id_klien;
-                    editKlasifikasi.value = data.klasifikasi_perkara;
+                    editKlasifikasi.value = data.Klasifikasi_perkara;
                     editPengadilan.value = data.pengadilan;
                     editMisili.value = data.misili_pengadilan;
                     editNoPerkara.value = data.no_perkara;
