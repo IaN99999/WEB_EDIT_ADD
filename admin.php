@@ -56,7 +56,21 @@ include('login.php');
     ?>
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
-            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+                        <div class="ms-auto">
+                            <h3 style="padding-top: 14px;font-family: fangsong;">SISTEM INFORMASI KEMAJUAN KLIEN</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -69,7 +83,7 @@ include('login.php');
                         <a class="nav-link" href="tambahadmin.php">Add admin`</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a> 
+                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
@@ -189,7 +203,7 @@ include('login.php');
     const editNoPerkara = document.querySelector('#editNoPerkara');
     const editTanggal = document.querySelector('#editTanggal');
     const editAgenda = document.querySelector('#editAgenda');
-    const editLink =" ";
+    const editLink = " ";
 
     // Ketika tombol edit di klik, tampilkan modal
     const editButtons = document.querySelectorAll('.tombol');
