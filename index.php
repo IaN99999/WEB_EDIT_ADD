@@ -15,8 +15,8 @@
 include 'GETdata.php';
 ?>
 
-<body style="background-color:#191a1b">
-    <nav class="navbar navbar-expand-md navbar-light flex-md-column">
+<body style="background-color:#aba0a0">
+    <nav class="navbar navbar-expand-md navbar-light flex-md-column" style="border-bottom: solid;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
