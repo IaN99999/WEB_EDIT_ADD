@@ -68,14 +68,14 @@ if (mysqli_num_rows($resultt) > 0) {
         <div class="table-responsive">
             <h2 style="color:white">Data Umum</h2>
             <table class="table table-bordered">
-                <thead>
+                <thead style="background-color:#25316D">
                     <tr>
-                        <th style="background-color:black; color:white">id klien</th>
-                        <th style="background-color:black; color:white">pengadilan</th>
-                        <th style="background-color:black; color:white">misili pengadilan</th>
-                        <th style="background-color:black; color:white">nomor perkara</th>
-                        <th style="background-color:black; color:white">tanggal</th>
-                        <th style="background-color:black; color:white">agenda</th>
+                        <th style="color:white">id klien</th>
+                        <th style="color:white">pengadilan</th>
+                        <th style="color:white">misili pengadilan</th>
+                        <th style="color:white">nomor perkara</th>
+                        <th style="color:white">tanggal</th>
+                        <th style="color:white">agenda</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,10 +94,10 @@ if (mysqli_num_rows($resultt) > 0) {
             <br>
             <h2 style="color:white">Proses</h2>
             <table class="table table-bordered">
-                <thead>
+                <thead style="background-color:#25316D">
                     <tr>
-                        <th style="background-color:black; color:white">tahapan</th>
-                        <th style="background-color:black; color:white">PIC</th>
+                        <th style="color:white">tahapan</th>
+                        <th style="color:white">PIC</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -119,12 +119,12 @@ if (mysqli_num_rows($resultt) > 0) {
             </table>
             <h2 style="color:white">Jadwal Sidang</h2>
             <table class="table table-bordered">
-                <thead>
+                <thead style="background-color:#25316D">
                     <tr>
-                        <th style="background-color:black; color:white">tanggal sidang</th>
-                        <th style="background-color:black; color:white">agenda sidang</th>
-                        <th style="background-color:black; color:white">lawyer</th>
-                        <th style="background-color:black; color:white">keterangan</th>
+                        <th style="color:white">tanggal sidang</th>
+                        <th style="color:white">agenda sidang</th>
+                        <th style="color:white">lawyer</th>
+                        <th style="color:white">keterangan</th>
                     </tr>
                 </thead>
                 <tbody>
