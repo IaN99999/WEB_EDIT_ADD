@@ -77,7 +77,7 @@ include 'GETdata.php';
                             echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
                             echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
-                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "'>detail</button></td>";;
+                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "' >detail</button></td>";;
                             echo "</tr>";
                         }
                     } else {
@@ -108,7 +108,7 @@ include 'GETdata.php';
                 .then((response) => response.json())
                 .then((data) => {
                     // Arahkan pengguna ke halaman baru dengan data yang diambil dari server
-                    window.location.href = `detailkasus.php?id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
+                    window.location.href = `detailkasus.php?from=index&id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
                 })
                 .catch((error) => console.error(error));
         });
@@ -134,7 +134,7 @@ include 'GETdata.php';
                         const row = tableBody.insertRow();
                         row.innerHTML = `
             <td style='color:white'>${item.id_klien}</td>
-            <td style='color:white'>${item.klasifikasi_perkara}</td>
+            <td style='color:white'>${item.Klasifikasi_perkara}</td>
             <td style='color:white'>${item.pengadilan}</td>
             <td style='color:white'>${item.misili_pengadilan}</td>
             <td style='color:white'>${item.no_perkara}</td>

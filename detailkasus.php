@@ -57,7 +57,7 @@ if (mysqli_num_rows($resultt) > 0) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.php">Home</a>
+                        <a class="nav-link" href="<?php echo $_GET['from']; ?>.php">Home</a>
                     </li>
                 </ul>
             </div>

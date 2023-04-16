@@ -204,7 +204,7 @@ include('login.php');
                 .then((response) => response.json())
                 .then((data) => {
                     // Arahkan pengguna ke halaman baru dengan data yang diambil dari server
-                    window.location.href = `detailkasus.php?id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
+                    window.location.href = `detailkasus.php?from=admin&id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
                 })
                 .catch((error) => console.error(error));
         });
