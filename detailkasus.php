@@ -70,12 +70,12 @@ if (mysqli_num_rows($resultt) > 0) {
             <table class="table table-bordered">
                 <thead style="background-color:#25316D">
                     <tr>
-                        <th style="color:white">id klien</th>
-                        <th style="color:white">pengadilan</th>
-                        <th style="color:white">misili pengadilan</th>
-                        <th style="color:white">nomor perkara</th>
-                        <th style="color:white">tanggal</th>
-                        <th style="color:white">agenda</th>
+                        <th style="color:white">Id klien</th>
+                        <th style="color:white">Pengadilan</th>
+                        <th style="color:white">Domisili pengadilan</th>
+                        <th style="color:white">Nomor perkara</th>
+                        <th style="color:white">Tanggal</th>
+                        <th style="color:white">Agenda</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,7 +96,7 @@ if (mysqli_num_rows($resultt) > 0) {
             <table class="table table-bordered">
                 <thead style="background-color:#25316D">
                     <tr>
-                        <th style="color:white">tahapan</th>
+                        <th style="color:white">Tahapan</th>
                         <th style="color:white">PIC</th>
                     </tr>
                 </thead>
@@ -121,10 +121,10 @@ if (mysqli_num_rows($resultt) > 0) {
             <table class="table table-bordered">
                 <thead style="background-color:#25316D">
                     <tr>
-                        <th style="color:white">tanggal sidang</th>
-                        <th style="color:white">agenda sidang</th>
-                        <th style="color:white">lawyer</th>
-                        <th style="color:white">keterangan</th>
+                        <th style="color:white">Tanggal sidang</th>
+                        <th style="color:white">Agenda sidang</th>
+                        <th style="color:white">Lawyer</th>
+                        <th style="color:white">Keterangan</th>
                     </tr>
                 </thead>
                 <tbody>
