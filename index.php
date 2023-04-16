@@ -18,7 +18,18 @@ include 'GETdata.php';
 <body style="background-color:#191a1b">
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
-            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+                        <div class="ms-auto">
+                            <h3 style="padding-top: 14px;font-family: fangsong;">SISTEM INFORMASI KEMAJUAN KLIEN</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,7 +74,7 @@ include 'GETdata.php';
                         <th style="color:white">Link</th>
                     </tr>
                 </thead>
-                <tbody id="table-body" style="background-color:black" >
+                <tbody id="table-body" style="background-color:black">
                     <?php
                     // Mengecek apakah ada data atau tidak
                     if (!empty($data)) {

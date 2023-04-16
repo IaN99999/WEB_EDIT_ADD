@@ -49,12 +49,12 @@ include('login.php');
     }
 </style>
 
-<body style="background-color:#191a1b">
+<body style="background-color:#aba0a0">
     <?php
     // Memanggil file a.php
     include 'GETdata.php';
     ?>
-    <nav class="navbar navbar-expand-md navbar-light flex-md-column">
+    <nav class="navbar navbar-expand-md navbar-light flex-md-column" style="border-bottom: solid;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -66,9 +66,6 @@ include('login.php');
                     </div>
                 </div>
             </div>
-        </div>
-
-
         </div>
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -86,10 +83,12 @@ include('login.php');
                         <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahproses.php">Add proses</a> </li>
+                        <a class="nav-link" href="tambahproses.php">Add proses</a>
+                    </li>
                     <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a> </li>
+                        <a class="nav-link" href="tambahjadwal.php">Add jadwal sidang</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>

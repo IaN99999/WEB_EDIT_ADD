@@ -1,11 +1,11 @@
 .navbar-nav li.nav-item a.nav-link:hover {
-    background-color: #8397a3; /* Set background color */
-    color: #212529; /* Set text color */
-  }
-  .navbar {
-    background-color: rgb(171, 160, 160);
-  }
+  background-color: #8397a3; /* Set background color */
+  color: #212529; /* Set text color */
+}
+.navbar {
+  background-color: rgb(171, 160, 160);
+}
 #thead {
-  background-color:black;
-  color:white
- }
+  background-color: black;
+  color: white;
+}

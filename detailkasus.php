@@ -50,7 +50,18 @@ if (mysqli_num_rows($resultt) > 0) {
 
     <nav class="navbar navbar-expand-md navbar-light flex-md-column">
         <div class="container-fluid">
-            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center">
+                        <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+                        <div class="ms-auto">
+                            <h3 style="padding-top: 14px;font-family: fangsong;">SISTEM INFORMASI KEMAJUAN KLIEN</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -80,14 +91,14 @@ if (mysqli_num_rows($resultt) > 0) {
                 </thead>
                 <tbody>
                     <?php
-                            echo "<tr>";
-                            echo "<td style='color:white'>" . $id_klien . "</td>";
-                            echo "<td style='color:white'>" . $pengadilan . "</td>";
-                            echo "<td style='color:white'>" . $misili_pengadilan . "</td>";
-                            echo "<td style='color:white'>" . $no_perkara . "</td>";
-                            echo "<td style='color:white'>" . $tanggal . "</td>";
-                            echo "<td style='color:white'>" . $agenda . "</td>";
-                            echo "</tr>";
+                    echo "<tr>";
+                    echo "<td style='color:white'>" . $id_klien . "</td>";
+                    echo "<td style='color:white'>" . $pengadilan . "</td>";
+                    echo "<td style='color:white'>" . $misili_pengadilan . "</td>";
+                    echo "<td style='color:white'>" . $no_perkara . "</td>";
+                    echo "<td style='color:white'>" . $tanggal . "</td>";
+                    echo "<td style='color:white'>" . $agenda . "</td>";
+                    echo "</tr>";
                     ?>
                 </tbody>
             </table>
@@ -128,7 +139,7 @@ if (mysqli_num_rows($resultt) > 0) {
                     </tr>
                 </thead>
                 <tbody>
-                <?php
+                    <?php
                     // Mengecek apakah ada data atau tidak
                     if (!empty($dataa)) {
                         // Output data dari setiap baris

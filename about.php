@@ -48,7 +48,18 @@
 
   <nav class="navbar navbar-expand-md navbar-light flex-md-column">
     <div class="container-fluid">
-      <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center">
+            <div class="navbar-brand"><img src="image/logo.png" alt=""></div>
+            <div class="ms-auto">
+              <h3 style="padding-top: 14px;font-family: fangsong;">SISTEM INFORMASI KEMAJUAN KLIEN</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,11 +82,11 @@
   <div class="container">
     <br><br><br><br><br>
     <div class="col-9">
-    <h3 style="color:white">Disclaimer</h3>
-    <p style="color:white">Halaman ini ditujukan untuk semua klien aktif Familaw Indonesia sebagai bentuk transparansi, komunikasi, informasi dan upaya peningkatan
-      kualitas layanan Familaw Indonesia. Halaman ini tidak mencantumkan nama, identitas dan informasi kerahasiaan klien untuk menjamin
-      kerahasiaan dan privasi. Sehingga setiap klien telah memiliki ID Kliennya masing-masing, dan untuk data lebih lanjut klik pada kolom "detail".
-    </p>
+      <h3 style="color:white">Disclaimer</h3>
+      <p style="color:white">Halaman ini ditujukan untuk semua klien aktif Familaw Indonesia sebagai bentuk transparansi, komunikasi, informasi dan upaya peningkatan
+        kualitas layanan Familaw Indonesia. Halaman ini tidak mencantumkan nama, identitas dan informasi kerahasiaan klien untuk menjamin
+        kerahasiaan dan privasi. Sehingga setiap klien telah memiliki ID Kliennya masing-masing, dan untuk data lebih lanjut klik pada kolom "detail".
+      </p>
     </div>
   </div>
   <br> <br>
