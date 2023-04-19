@@ -88,7 +88,7 @@ include 'GETdata.php';
                             echo "<td style='color:white'>" . $row["no_perkara"] . "</td>";
                             echo "<td style='color:white'>" . $row["tanggal"] . "</td>";
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
-                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "' >detail</button></td>";;
+                            echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "' >detail</button></td>";
                             echo "</tr>";
                         }
                     } else {

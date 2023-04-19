@@ -77,10 +77,10 @@ include('login.php');
                         <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahadmin.php">Add admin`</a>
+                        <a class="nav-link" href="tambahadmin.php">Add admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
+                        <a class="nav-link" href="tambahDataKlien.php">Add data klien</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahproses.php">Add proses</a>
@@ -112,6 +112,7 @@ include('login.php');
                         <th style="color:white">Agenda</th>
                         <th style="color:white">Link</th>
                         <th style="color:white">Edit Data</th>
+                        <th style="color:white">delete</th>
                     </tr>
                 </thead>
                 <tbody style="background-color:black">
@@ -130,6 +131,7 @@ include('login.php');
                             echo "<td style='color:white'>" . $row["agenda"] . "</td>";
                             echo "<td style='color:white'><button class='link btn-success' data-id='" . $row['id_klien'] . "'>detail</button></td>";
                             echo "<td><button class='tombol btn-success' data-id='" . $row['id_klien'] . "'>edit</button></td>";
+                            echo "<td><button class='tdelete btn-danger' data-id='" . $row['id_klien'] . "'>delete</button></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -204,7 +206,7 @@ include('login.php');
     const editAgenda = document.querySelector('#editAgenda');
     const editLink = " ";
 
-    // Ketika tombol edit di klik, tampilkan modal
+
     const editButtons = document.querySelectorAll('.tombol');
     const details = document.querySelectorAll('.link');
     details.forEach((button) => {
@@ -217,12 +219,12 @@ include('login.php');
                 .then((response) => response.json())
                 .then((data) => {
                     // Arahkan pengguna ke halaman baru dengan data yang diambil dari server
-                    window.location.href = `detailkasus.php?from=admin&id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
+                    window.location.href = `detailkasusADMIN.php?from=admin&edit=true&id_klien=${id}&klasifikasi_perkara=${data.klasifikasi_perkara}&pengadilan=${data.pengadilan}&misili_pengadilan=${data.misili_pengadilan}&no_perkara=${data.no_perkara}&tanggal=${data.tanggal}&agenda=${data.agenda}&link=${data.link}`;
                 })
                 .catch((error) => console.error(error));
         });
     });
-
+    // Ketika tombol edit di klik, tampilkan modal
     editButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
@@ -299,5 +301,29 @@ include('login.php');
             .catch((error) => console.error(error));
     });
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Fungsi untuk menghapus data
+        $('.tdelete').on('click', function() {
+            var id = $(this).data('id');
+            var confirm_delete = confirm("Apakah Anda yakin ingin menghapus data ini?");
+            if (confirm_delete == true) {
+                $.ajax({
+                    url: 'hapus_data.php',
+                    type: 'POST',
+                    data: {id: id},
+                    success: function(response) {
+                        // Jika data berhasil dihapus, hapus baris tabel
+                        if (response == "success") {
+                            $('button[data-id="'+id+'"]').closest('tr').remove();
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
 
 </html>

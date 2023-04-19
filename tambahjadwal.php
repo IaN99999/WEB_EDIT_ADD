@@ -39,10 +39,10 @@ require_once 'login.php';
                         <a class="nav-link" href="admin.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahadmin.php">Add admin`</a>
+                        <a class="nav-link" href="tambahadmin.php">Add admin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tambahDataKlien.php">Add data klien`</a>
+                        <a class="nav-link" href="tambahDataKlien.php">Add data klien</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tambahproses.php">Add proses</a>
