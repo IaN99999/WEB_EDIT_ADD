@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2023 at 05:09 AM
+-- Generation Time: Apr 20, 2023 at 04:09 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -28,17 +28,31 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `data_proses` (
+  `id_proses` int(11) NOT NULL,
   `id_klien` int(11) NOT NULL,
   `tahapan` text NOT NULL,
   `PIC` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `data_proses`
+-- Indexes for dumped tables
 --
 
-INSERT INTO `data_proses` (`id_klien`, `tahapan`, `PIC`) VALUES
-(170123, 'idwhidwid', 'dijawijdiwd');
+--
+-- Indexes for table `data_proses`
+--
+ALTER TABLE `data_proses`
+  ADD PRIMARY KEY (`id_proses`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `data_proses`
+--
+ALTER TABLE `data_proses`
+  MODIFY `id_proses` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
