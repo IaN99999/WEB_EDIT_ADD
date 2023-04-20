@@ -13,15 +13,15 @@ $pendaftaran_perkara = $_POST['pendaftaran_perkara'];
 
 
 // Menambahkan data ke dalam tabel "data_proses"
-$sql = "INSERT INTO data_proses (id_klien, tahapan, PIC)
-VALUES ('$id_klien', 'Konsultasi', '$konsultasi'),
-       ('$id_klien', 'Pembuatan Gugatan', '$pembuatan_gugatan'),
-       ('$id_klien', 'Review Klien', '$review_klien'),
-       ('$id_klien', 'Revisi Klien', '$revisi_klien'),
-       ('$id_klien', 'Review Kepala Divisi Litigasi', '$Review_Kepala_Divisi_Litigasi'),
-       ('$id_klien', 'Revisi Kepala Divisi Litigasi', '$Revisi_Kepala_Divisi_Litigasi'),
-       ('$id_klien', 'Persetujuan Gugatan', '$persetujuan_gugatan'),
-       ('$id_klien', 'Pendaftaran Perkara', '$pendaftaran_perkara')";
+$sql = "INSERT INTO data_proses (id_proses,id_klien, tahapan, PIC)
+VALUES ('1','$id_klien', 'Konsultasi', '$konsultasi'),
+       ('2','$id_klien', 'Pembuatan Gugatan', '$pembuatan_gugatan'),
+       ('3','$id_klien', 'Review Klien', '$review_klien'),
+       ('4','$id_klien', 'Revisi Klien', '$revisi_klien'),
+       ('5','$id_klien', 'Review Kepala Divisi Litigasi', '$Review_Kepala_Divisi_Litigasi'),
+       ('6','$id_klien', 'Revisi Kepala Divisi Litigasi', '$Revisi_Kepala_Divisi_Litigasi'),
+       ('7','$id_klien', 'Persetujuan Gugatan', '$persetujuan_gugatan'),
+       ('8','$id_klien', 'Pendaftaran Perkara', '$pendaftaran_perkara')";
 
 if (mysqli_query($conn, $sql)) {
   echo "Data berhasil ditambahkan.";

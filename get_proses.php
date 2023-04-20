@@ -1,10 +1,10 @@
 <?php
 require "connection.php";
 // Ambil id_klien dari parameter URL
-$id = $_GET['id_klien'];
+$id = $_GET['id_proses'];
 
 // Query untuk mengambil data klien berdasarkan id_klien
-$query = "SELECT * FROM data_proses WHERE id_klien = $id";
+$query = "SELECT * FROM data_proses WHERE id_proses = $id";
 $result = mysqli_query($conn, $query);
 
 // Cek apakah query berhasil dijalankan

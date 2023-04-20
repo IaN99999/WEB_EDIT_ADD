@@ -198,7 +198,7 @@ if (mysqli_num_rows($resultt) > 0) {
                             echo "<tr>";
                             echo "<td style='color:white'>" . $row["tahapan"] . "</td>";
                             echo "<td style='color:white'>" . $row["PIC"] . "</td>";
-                            echo "<td><button class='bproses btn-success' data-id='" . $row['id_klien'] . "'>edit</button></td>";
+                            echo "<td><button class='bproses btn-success' data-id='" . $row['id_proses'] . "'>edit</button></td>";
                             echo "</tr>";
                         }
                     } else {
@@ -291,6 +291,7 @@ if (mysqli_num_rows($resultt) > 0) {
             <br>
             <form id="editprosesForm">
                 <input type="hidden" id="editId" name="id">
+                <input type="hidden" id="editIdproses" name="id">
                 <label for="editTahapan">Tahapan:</label>
                 <br>
                 <input type="text" id="editTahapan" name="tahapan">
@@ -357,11 +358,12 @@ if (mysqli_num_rows($resultt) > 0) {
     const editTahapan = document.querySelector('#editTahapan');
     const editPIC = document.querySelector('#editPIC');
     const closeprosesBtn = document.querySelector('.closeproses');
+    const editIdproses= document.querySelector('#editIdproses');
     //jadwal
     //ambil element untuk proses modal  
     const editjadwalButtons = document.querySelectorAll('.bjadwal');
     const modaljadwal = document.querySelector('.modaljadwal');
-    const editjadwalForm = document.querySelector('#editjadwlForm');
+    const editjadwalForm = document.querySelector('#editjadwalForm');
     const edittanggalsidang = document.querySelector('#edittanggalsidang');
     const editagendasidang = document.querySelector('#editagendasidang');
     const editlawyer = document.querySelector('#editlawyer');
@@ -396,13 +398,16 @@ if (mysqli_num_rows($resultt) > 0) {
     //proses
     editprosesButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            const id = button.getAttribute('data-id');
+            const idd = button.getAttribute('data-id');
             // Ambil data dari server berdasarkan id
-            console.log(id);
-            fetch(`get_proses.php?id_klien=${id}`)
+            console.log(idd);
+            fetch(`get_proses.php?id_proses=${idd}`)
                 .then((response) => response.json())
                 .then((data) => {
                     // Isi nilai input form edit dengan data yang diambil dari server
+                    editId.value = data.id_klien;
+                    editIdproses.value =idd;
+                    console.log(editId);
                     editTahapan.value = data.tahapan;
                     editPIC.value = data.PIC;
                     // Tampilkan modal edit
@@ -416,18 +421,18 @@ if (mysqli_num_rows($resultt) > 0) {
         button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
             // Ambil data dari server berdasarkan id
-            
             fetch(`get_jadwal.php?id_klien=${id}`)
                 .then((response) => response.json())
                 .then((data) => {
                     editId.value = data.id_klien;
-                    edittanggalsidang= data.tanggal_sidang;
-                    editAgenda = data.agenda_sidang;
-                    editlawyer = data.lawyer;
-                    editketerangan = data.keterangan;
+                    edittanggalsidang.value= data.tanggal_sidang;
+                    editagendasidang.value = data.agenda_sidang;
+                    editlawyer.value = data.lawyer;
+                    editketerangan.value = data.keterangan;
                     // Isi nilai input form edit dengan data yang diambil dari server
                     // Tampilkan modal edit
                     modaljadwal.style.display = 'block';
+                    console.log("masuk");
                 })
                 .catch((error) => console.error(error));
         });
@@ -507,23 +512,22 @@ if (mysqli_num_rows($resultt) > 0) {
     //proses
     editprosesForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        const tahapan = editId.value;
+        const id = editId.value;
         const klasifikasi = editKlasifikasi.value;
-        console.log(link);
-        fetch('update_data.php', {
+        const tahapan = editTahapan.value;
+        const PIC = editPIC.value;
+        const idproses = editIdproses.value;
+        console.log(id);
+        fetch('update_dataproses.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     id_klien: id,
-                    klasifikasi_perkara: klasifikasi,
-                    pengadilan: pengadilan,
-                    misili_pengadilan: misili,
-                    no_perkara: noPerkara,
-                    tanggal: tanggal,
-                    agenda: agenda,
-                    link: link,
+                    id_proses: idproses,
+                    tahapan: tahapan,
+                    PIC: PIC,
                 }),
             })
             .then((response) => response.json())
@@ -542,7 +546,7 @@ if (mysqli_num_rows($resultt) > 0) {
         event.preventDefault();
         const id = editId.value;
         const tanggal = edittanggalsidang.value;
-        const agenda = editAgenda.value;
+        const agenda = editagendasidang.value;
         const lawyer = editlawyer.value;
         const keterangan = editketerangan.value;
         console.log(id);
