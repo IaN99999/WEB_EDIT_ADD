@@ -2,7 +2,7 @@
 $host = "localhost"; //nama host
 $user = "root"; //username untuk database
 $pass = ""; //password untuk database
-$dbname = "novita"; //nama database yang ingin digunakan
+$dbname = "novita2"; //nama database yang ingin digunakan
 
 // membuat koneksi ke database
 $conn = mysqli_connect($host, $user, $pass, $dbname);

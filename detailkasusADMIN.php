@@ -1,7 +1,17 @@
 <!DOCTYPE html>
+<?php
+// Memeriksa apakah pengguna telah login atau belum
+session_start();
+if (!isset($_SESSION['username'])) {
+    // Redirect pengguna ke halaman login jika belum login
+    header("Location: masuk.php");
+    exit();
+}
+?>
 <html lang="en">
 <?php
 require "connection.php";
+
 
 $id_klien = $_GET['id_klien'];
 

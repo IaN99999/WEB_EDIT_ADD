@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <?php
-include('login.php');
+// Memeriksa apakah pengguna telah login atau belum
+session_start();
+if (!isset($_SESSION['username'])) {
+    // Redirect pengguna ke halaman login jika belum login
+    header("Location: masuk.php");
+    exit();
+}
 ?>
 <html lang="en">
 
